@@ -6,7 +6,15 @@
     width: 100%;
     padding: 10px;
 }
-
+.center{
+    margin: 0 auto;
+}
+.team{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -46,7 +54,7 @@ footer {
 body {
     max-width: 100%;
     font-family: 'Comfortaa';
-    background-image: url("../bg.jpg");
+    background-color: #e5e5e5;
 }
 
 .navbar-fixed-top {
@@ -75,4 +83,12 @@ body {
     background-color: #e5e5e5;
     width: 100%;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 4px;
+}
+.iiit_logo{
+    width: 60px;
+    height: 60px;
 }
