@@ -230,3 +230,14 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.fontawesomeicon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+ }
+
+.Envelope::before {
+   font: var(--fa-font-solid);
+    content: ' \f0e0';
+ }
