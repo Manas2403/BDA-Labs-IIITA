@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 2rem;
 }
 .type {
     font-size: 2rem;
@@ -47,7 +48,7 @@
 .post__content--body {
     color: #999;
     font-size: 1rem;
-    text-align: center;
+    text-align: justify;
 }
 @media (max-width: 448px) {
     .recruiter-grid {

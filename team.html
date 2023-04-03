@@ -20,6 +20,10 @@
             href="https://fonts.googleapis.com/css?family=Comfortaa"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+        />
     </head>
 
     <body onload="plusDivs(-1)">
@@ -55,6 +59,24 @@
                 </ul>
             </div>
         </nav>
+        <section
+            style="
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 2rem;
+                border-bottom: 1px solid #ccc;
+            "
+        >
+            <div><a href="#faculty">Faculty </a></div>
+            <div><a href="#staff">Staff</a></div>
+            <div><a href="#phd">PhD</a></div>
+            <div><a href="#mtech">MTech</a></div>
+            <div><a href="#dual">Dual Degree</a></div>
+            <div><a href="#btech">BTech</a></div>
+        </section>
         <section class="faculty_section" id="faculty">
             <div class="type" style="font-weight: bold; color: black">
                 Faculty
@@ -299,9 +321,13 @@
                 </div>
             </div>
         </section>
+        <div class="scroll-top">
+            <i class="fa fa-angle-up"></i>
+        </div>
         <footer>
             &#169; 2023 - Big Data Analytics Lab <br />
             Indian Institute of Information Technology Allahabad
         </footer>
+        <script src="./JS/index.js"></script>
     </body>
 </html>
