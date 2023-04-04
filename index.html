@@ -197,16 +197,7 @@
                         direction="up"
                         style="height: 150px"
                     >
-                        <ul>
-                            <li>
-                                The
-                                <b style="color: rgb(12, 0, 82)"
-                                    >BDA Lab website</b
-                                >
-                                is now functioning!!
-                            </li>
-                            <br />
-                        </ul>
+                        <ul class="news-container"></ul>
                     </marquee>
                     <hr />
                 </div>
@@ -235,5 +226,26 @@
             Indian Institute of Information Technology Allahabad
         </footer>
         <script src="./JS/index.js"></script>
+        <script>
+            const getNews = async () => {
+                let res = await fetch(
+                    "https://bda-labs-backend.onrender.com/news"
+                );
+                let data = await res.json();
+                return data;
+            };
+            const newsContainer = document.querySelector(".news-container");
+            getNews().then((data) => {
+                data.data.forEach((news) => {
+                    newsContainer.innerHTML += `
+                    <li>
+                      <a href=${news.link}target="_blank"><b style="color: rgb(12, 0, 82)">${news.title}</b></a>
+                        <br />
+                    </li>
+                    <br />
+                    `;
+                });
+            });
+        </script>
     </body>
 </html>
