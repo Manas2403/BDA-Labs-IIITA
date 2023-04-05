@@ -10,17 +10,15 @@ getCourses().then((data) => {
         const mtech = course.mtech.join(", ");
         courseContainer.innerHTML += `<li>
         <h2>Course ${i + 1}</h2>
-        <ul>
-          <li>Instructor: ${course.instructor}</li>
-          <li>PhD TAs:${phd}</li>
-          <li>M.tech TAs: ${mtech}</li>
-          <li>Total Students: ${course.students}</li>
+        <ul class="course_details">
+          <li><b>Instructor</b>: ${course.instructor}</li>
+          <li><b>PhD TAs</b>: ${phd}</li>
+          <li><b>M.tech TAs</b>: ${mtech}</li>
+          <li><b>Total Students</b>: ${course.students}</li>
           <h4>Publications</h4>
-          <ul>
           ${course.publications.map((pub) => {
-              return `<li><a href=${pub.link}>${pub.name}</a></li>`;
-          })}
-          </ul>
+              return `<a href=${pub.link}>${pub.name}</a>`;
+          })}   
         </ul>
       </li>`;
     });
