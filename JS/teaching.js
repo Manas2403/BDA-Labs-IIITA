@@ -9,7 +9,7 @@ getCourses().then((data) => {
         const phd = course.phd.join(", ");
         const mtech = course.mtech.join(", ");
         courseContainer.innerHTML += `<li>
-        <h2>Course ${i + 1}</h2>
+        <h2>${course.name}</h2>
         <ul class="course_details">
           <li><b>Instructor</b>: ${course.instructor}</li>
           <li><b>PhD TAs</b>: ${phd}</li>
