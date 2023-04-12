@@ -305,9 +305,9 @@ li {
 
 .ContactCard_contactCard__1yZii {
     width: 300px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
-    border-radius: .35rem;
+    border-radius: 0.35rem;
     border-top-left-radius: 0.35rem;
     border-top-right-radius: 0.35rem;
     border-bottom-right-radius: 0.35rem;
@@ -320,19 +320,19 @@ li {
     background-color: #fff;
 }
 .ContactCard_cardHeader__3Fu8s {
-    padding: .5rem;
+    padding: 0.5rem;
     padding-top: 0.5rem;
     padding-right: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0.5rem;
     background-color: #012970;
-    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgba(0, 0, 0, 0.125);
     text-align: center;
-    border-top-left-radius: .35rem;
-    border-top-right-radius: .35rem;
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
 }
 .ContactCard_profileImage__BfUCA {
     margin: 1rem 0;
@@ -342,7 +342,7 @@ li {
     margin-left: 0px;
     width: 250px;
     height: 250px;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
@@ -352,7 +352,7 @@ li {
     font-size: 1.25rem;
     color: #fff;
     text-align: center;
-    margin: .2rem 0;
+    margin: 0.2rem 0;
     margin-top: 0.2rem;
     margin-right: 0px;
     margin-bottom: 0.2rem;
@@ -361,25 +361,25 @@ li {
 .ContactCard_subDesignation__3CVix {
     font-size: 1rem;
     color: #fff;
-    margin: .2rem 0;
+    margin: 0.2rem 0;
     margin-top: 0.2rem;
     margin-right: 0px;
     margin-bottom: 0.2rem;
     margin-left: 0px;
 }
 .ContactCard_cardContent__2ONbn {
-    padding: .2rem;
+    padding: 0.2rem;
     padding-top: 0.2rem;
     padding-right: 0.2rem;
     padding-bottom: 0.2rem;
     padding-left: 0.2rem;
     color: #012970;
     text-align: center;
-    border-bottom-left-radius: .35rem;
-    border-bottom-right-radius: .35rem;
+    border-bottom-left-radius: 0.35rem;
+    border-bottom-right-radius: 0.35rem;
 }
 .ContactCard_footer__Ut8zl {
-    padding: .7rem;
+    padding: 0.7rem;
     padding-top: 0.7rem;
     padding-right: 0.7rem;
     padding-bottom: 0.7rem;
@@ -423,7 +423,7 @@ td {
     text-decoration-color: initial;
     display: flex;
     justify-content: flex-start;
-    margin: 0 0 .5rem;
+    margin: 0 0 0.5rem;
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 0.5rem;
@@ -456,4 +456,95 @@ td {
     transition-property: fill;
     flex-shrink: 0;
     user-select: none;
+}
+.footer-section {
+    background-color: white;
+    margin-top: 2rem;
+}
+
+.footer_container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.pre-footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pre-footer .list {
+    list-style-type: none;
+    width: calc(100% / 3);
+    padding: 0 30px;
+}
+
+.pre-footer .list-head {
+    /* border-bottom: 1px solid #dee236; */
+    border-bottom: 2px solid var(--highlight-bg);
+    padding-bottom: 6px;
+}
+
+.pre-footer .list-body {
+    padding-top: 6px;
+}
+
+.pre-footer .list-body p {
+    margin-bottom: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    gap: 1rem;
+}
+
+.list-body p {
+    color: #444;
+    font-size: 14px;
+}
+
+.col1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 0.6rem;
+}
+
+.col1 a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+@media (min-width: 1200px) {
+    .footer_container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .pre-footer .list {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pre-footer {
+        display: block;
+    }
+
+    .pre-footer .list {
+        margin: auto;
+        margin-bottom: 45px;
+    }
 }
