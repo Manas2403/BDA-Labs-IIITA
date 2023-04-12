@@ -1,11 +1,11 @@
 .page-top {
-    background: url("../PIC/workshop.jpg") repeat scroll center center #dcdcdc;
+    /* background: url("../PIC/workshop.jpg") repeat scroll center center #dcdcdc;
     min-height: 60vh;
     margin-bottom: 5px;
     padding: 6px 0;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0% 50%;
+    background-position: 0% 50%; */
 }
 
 .container {
@@ -19,19 +19,26 @@
     text-align: center;
     font-weight: bold;
 }
-.workshop_container {
+.workshop-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    padding: 1rem;
 }
 
 .workshop {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
+    justify-content: space-around;
+    background: white;
+    padding: 1rem;
+    gap: 4px;
+    border-radius: 1rem;
+    border: 2px solid rgb(1, 41, 112);
+    box-shadow: 0 2px 4px 1px rgb(12 0 46 / 4%);
+    transition: all 0.3s ease-in-out;
 }
 .workshop_desc {
     display: flex;
@@ -39,9 +46,12 @@
     gap: 4px;
 }
 .workshop_title {
+    color: rgb(1, 41, 112);
     font-size: 1.5rem;
     font-weight: bold;
-    color: #3fada8;
+}
+.workshop_img img {
+    border-radius: 1rem;
 }
 @media (max-width: 900px) {
     .workshop {

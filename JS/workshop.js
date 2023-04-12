@@ -20,7 +20,9 @@ getWorkshops().then((data) => {
                ${workshop.desc}
             </div>
             <div class="start_date">
-                Start Date: <b>${day + "/" + month + "/" + year}</b>
+                <span style="font-weight:bold;color:rgb(1, 41, 112);font-size:1.1rem">Start Date</span>: <b>${
+                    day + "/" + month + "/" + year
+                }</b>
             </div>
             <div class="register">
                 To attend register here:
@@ -28,16 +30,7 @@ getWorkshops().then((data) => {
                     href=${workshop.registerationLink}
                     style="color: blue"
                     target="_blank"
-                    >Link</a
-                >
-            </div>
-            <div class="payment">
-                Payment Link:
-                <a
-                    href=${workshop.paymentLink}
-                    style="color: blue"
-                    target="_blank"
-                    >Link</a
+                    ><img src="./PIC/arrow.svg" style="width:15px;color:rgb(1,41,112)"/></a
                 >
             </div>
             <div class="external_links">
@@ -46,16 +39,16 @@ getWorkshops().then((data) => {
                     href=${workshop.externalLinks}
                     style="color: blue"
                     target="_blank"
-                    >Link</a
+                    ><img src="./PIC/arrow.svg" style="width:15px;color:rgb(1,41,112)"/></a
                 >
             </div>
         </div>
         <div class="workshop_img">
             <img
-                src="./PIC/workshop.jpg"
+                src="./PIC/iiita-bg.png"
                 alt=""
                 width="400px"
-                height="200px"
+                height="250px"
             />
         </div>
     </div>`;
