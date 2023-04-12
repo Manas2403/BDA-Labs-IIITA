@@ -16,7 +16,7 @@
         />
         <link rel="stylesheet" href="./CSS/style.css" />
         <link
-            href="https://fonts.googleapis.com/css?family=Comfortaa"
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
         />
         <link
@@ -51,17 +51,7 @@
     </head>
 
     <body onload="plusDivs(-1)">
-        <div id="head_bg">
-            <!-- <center><img src="./head_main.jpg" width="60%" /></center> -->
-            <center><h1>Big Data Analytics Lab</h1></center>
-            <img
-                src="./IIIT_logo_transparent.gif"
-                alt="lOGO"
-                srcset=""
-                class="iiit_logo"
-            />
-        </div>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default" style="background: white">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a href="http://iiita.ac.in"
@@ -83,6 +73,16 @@
                 </ul>
             </div>
         </nav>
+        <div id="head_bg">
+            <!-- <center><img src="./head_main.jpg" width="60%" /></center> -->
+            <center><h1>Big Data Analytics Lab</h1></center>
+            <img
+                src="./IIIT_logo_transparent.gif"
+                alt="lOGO"
+                srcset=""
+                class="iiit_logo"
+            />
+        </div>
         <div class="row" style="padding: 20px">
             <div class="col-sm-8">
                 <div class="container-fluid">
@@ -187,25 +187,48 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card" style="padding: 40px">
-                    <h2>News</h2>
-                    <hr />
+                <div class="card" style="">
+                    <div
+                        style="
+                            color: white;
+                            background-color: rgb(1, 41, 112);
+                            padding: 1rem;
+                            font-size: 1.5rem;
+                        "
+                    >
+                        News
+                    </div>
                     <marquee
                         scrollamount="2"
                         onmouseover="this.stop();"
                         onmouseout="this.start();"
                         direction="up"
-                        style="height: 150px"
+                        style="height: 150px; padding: 1rem"
                     >
                         <ul class="news-container"></ul>
                     </marquee>
                     <hr />
                 </div>
 
-                <div class="card" style="padding: 40px; margin-top: 20px">
-                    <h2>Vision and Mission</h2>
+                <div class="card" style="margin-top: 20px">
+                    <div
+                        style="
+                            color: white;
+                            background-color: rgb(1, 41, 112);
+                            padding: 1rem;
+                            font-size: 1.5rem;
+                        "
+                    >
+                        Vision and Mission
+                    </div>
 
-                    <p style="text-align: justify; text-justify: inter-word">
+                    <p
+                        style="
+                            text-align: justify;
+                            text-justify: inter-word;
+                            padding: 1rem;
+                        "
+                    >
                         At the Big Data Analytics Lab of IIITA, our vision is to
                         become a global leader in big data research and
                         education. We aim to drive innovation and advancements

@@ -10,16 +10,18 @@ getPublications().then((data) => {
     data.data.forEach((post) => {
         postContainer.innerHTML += `
         <div class="post">
-        <div class="post_title">${post.title}</div>
-        <div class="post_authors">
+        <div class="post_title"><img src="./PIC/book-solid.svg" style="width:15px;color:rgb(1,41,112)"/> ${
+            post.title
+        }</div>
+        <div class="post_authors"><span style="font-weight:bold;color:rgb(1, 41, 112);font-size:1.1rem">Authors</span>:
         ${post.people.map((author) => {
             return `<a href=${author.link}>${author.name}</a>`;
         })}
         </div>
         <div class="post_desc">${post.desc}</div>
-        <div class="external_links">Read More: <a href=${post.links.join(
+        <div class="external_links"><span style="font-weight:bold;color:rgb(1, 41, 112);font-size:1.1rem">Read More</span>:  <a style="text-decoration:none" target="_blank" href=${post.links.join(
             ", "
-        )}>Link</a></div>
+        )}><img src="./PIC/arrow.svg" style="width:15px;color:rgb(1,41,112)"/></a></div>
     </div>`;
     });
 });
