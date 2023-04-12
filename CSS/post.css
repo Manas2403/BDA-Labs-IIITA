@@ -21,18 +21,33 @@
 .post {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
     background-color: white;
-    padding: 1rem;
+    /* padding: 1rem; */
     border-radius: 1rem;
-    border: 2px solid rgb(1, 41, 112);
+    /* border: 2px solid rgb(1, 41, 112); */
     box-shadow: 0 2px 4px 1px rgb(12 0 46 / 4%);
     transition: all 0.3s ease-in-out;
 }
 .post_title {
-    color: rgb(1, 41, 112);
-    font-size: 2rem;
+    background-color: rgb(1, 41, 112);
+    color: white;
+    font-size: 1.3rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 0.5rem;
     /* font-weight: bold; */
+}
+.post_authors {
+    padding: 0 0.5rem;
+    padding-top: 1rem;
+}
+.post_desc {
+    padding: 0 0.5rem;
+}
+.external_links {
+    padding: 0 0.5rem;
+    padding-bottom: 1rem;
 }
 .post_authors a {
     font-size: 1rem;

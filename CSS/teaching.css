@@ -1,0 +1,31 @@
+.course-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 0 2rem; */
+}
+.course_desc {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: white;
+    /* padding: 1rem; */
+    border-radius: 1rem;
+    /* border: 2px solid rgb(1, 41, 112); */
+    box-shadow: 0 2px 4px 1px rgb(12 0 46 / 4%);
+    transition: all 0.3s ease-in-out;
+    font-size: 1.1rem;
+}
+.course_title {
+    background-color: rgb(1, 41, 112);
+    color: white;
+    font-size: 2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 1rem 1rem;
+}
+.course_details {
+    padding: 1rem 1rem;
+}

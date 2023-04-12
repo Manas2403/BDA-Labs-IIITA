@@ -10,7 +10,7 @@ getPublications().then((data) => {
     data.data.forEach((post) => {
         postContainer.innerHTML += `
         <div class="post">
-        <div class="post_title"><img src="./PIC/book-solid.svg" style="width:15px;color:rgb(1,41,112)"/> ${
+        <div class="post_title"><i class="fa-solid fa-book" style="color: #ffffff;"></i> ${
             post.title
         }</div>
         <div class="post_authors"><span style="font-weight:bold;color:rgb(1, 41, 112);font-size:1.1rem">Authors</span>:

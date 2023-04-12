@@ -8,18 +8,22 @@ getCourses().then((data) => {
     data.data.forEach((course, i) => {
         const phd = course.phd.join(", ");
         const mtech = course.mtech.join(", ");
-        courseContainer.innerHTML += `<li>
-        <h2>${course.name}</h2>
+        courseContainer.innerHTML += `<div class="course_desc">
+        <div class="course_title">${course.name}</div>
         <ul class="course_details">
-          <li><b>Instructor</b>: ${course.instructor}</li>
-          <li><b>PhD TAs</b>: ${phd}</li>
-          <li><b>M.tech TAs</b>: ${mtech}</li>
-          <li><b>Total Students</b>: ${course.students}</li>
-          <h4>Publications</h4>
+          <li><b><span style="color:rgb(0,41,112);font-size:1.5rem">Instructor</span></b>: ${
+              course.instructor
+          }</li>
+          <li><b><span style="color:rgb(0,41,112);font-size:1.5rem">PhD TAs</span></b>: ${phd}</li>
+          <li><b><span style="color:rgb(0,41,112);font-size:1.5rem"s>M.tech TAs</span></b>: ${mtech}</li>
+          <li><b><span style="color:rgb(0,41,112);font-size:1.5rem">Total Students</span></b>: ${
+              course.students
+          }</li>
+          <h4 style="color:rgb(0,41,112);font-size:1.5rem;font-weight:bold">Publications</h4>
           ${course.publications.map((pub) => {
-              return `<a href=${pub.link}>${pub.name}</a>`;
+              return `<a style="text-decoration:none" href=${pub.link}>${pub.name}</a>`;
           })}   
         </ul>
-      </li>`;
+      </div>`;
     });
 });
