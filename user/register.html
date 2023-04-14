@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>IIITA - BDA</title>
+        <meta charset="utf-8" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/png" href="../iiit.png" />
+        <link
+            rel="stylesheet"
+            href="https://www.w3schools.com/w3css/4/w3.css"
+        />
+        <link rel="stylesheet" href="../CSS/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            .btn-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <nav
+            class="navbar navbar-default"
+            style="background: white; margin-bottom: 0"
+        >
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="http://iiita.ac.in"
+                        ><img
+                            src="../IIIT_logo_transparent.gif"
+                            class="navbar-brand"
+                            height="60px"
+                    /></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html">Research </a></li>
+                    <li>
+                        <a href="../publications.html">Publications </a>
+                    </li>
+                    <li><a href="../workshop.html">Workshops</a></li>
+                    <li><a href="../committee.html">Committee</a></li>
+                    <li><a href="../teaching.html">Teaching</a></li>
+                    <li><a href="../team.html">Team</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li>
+                        <a href="../type.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div
+            style="
+                font-size: 3rem;
+                color: rgb(1, 41, 112);
+                text-align: center;
+                font-weight: bold;
+                margin-top: 2rem;
+            "
+        >
+            Register
+        </div>
+        <div
+            style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                flex-direction: column;
+                gap: 1rem;
+                margin-top: 2rem;
+            "
+        >
+            <form action="" id="register" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            required
+                            placeholder="Enter Name"
+                            class="form-control"
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="username">
+                        <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            required
+                            placeholder="Enter Email"
+                            class="form-control"
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="password">
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            required
+                            placeholder="Enter Password"
+                            class="form-control"
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">
+                        <input
+                            type="number"
+                            name="mobile"
+                            id="mobile"
+                            placeholder="Enter mobile number"
+                            class="form-control"
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">
+                        <input
+                            type="text"
+                            name="address"
+                            id="address"
+                            placeholder="Enter Office Address"
+                            class="form-control"
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="about">
+                        <textarea
+                            name="about"
+                            id="about"
+                            cols="40"
+                            rows="10"
+                            placeholder="Fill a brief description about yourself"
+                            class="form-control"
+                        ></textarea>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="about">
+                        <textarea
+                            name="researchInterests"
+                            id="researchInterests"
+                            cols="40"
+                            rows="10"
+                            placeholder="Enter your research interests seperate by comma eg:(Machine Learning, Deep Learning)"
+                            class="form-control"
+                        ></textarea>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="profileImg">
+                        <input
+                            type="file"
+                            name="profileImg"
+                            id="profileImg"
+                            accept="image/*"
+                        />
+                    </label>
+                </div>
+                <button
+                    type="submit"
+                    class="btn btn-primary mb-5"
+                    style="background-color: rgb(1, 41, 112)"
+                >
+                    Register
+                </button>
+            </form>
+            <a href="./login.html">Login Here</a>
+        </div>
+        <section class="footer-section" style="padding: 100px 0">
+            <div class="footer_container">
+                <div class="pre-footer">
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6
+                                style="
+                                    font-weight: 700;
+                                    font-size: 1rem;
+                                    margin-bottom: 0.5rem;
+                                    line-height: 1.2;
+                                "
+                            >
+                                About IIITA
+                            </h6>
+                        </li>
+                        <li class="list-body">
+                            <p>
+                                Established in 1999, as a Centre of Excellence
+                                in Information Technology and allied areas, by
+                                the Government of India, the IIIT-A is currently
+                                an institute of national importance, which is
+                                governed by the act of parliament, IIIT
+                                Act-2014.
+                            </p>
+                        </li>
+                        <li class="list-body text-center">
+                            <div class="social-links"></div>
+                        </li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <div
+                                style="
+                                    font-weight: 700;
+                                    font-size: 1rem;
+                                    margin-bottom: 0.5rem;
+                                    line-height: 1.2;
+                                "
+                            >
+                                Useful Links
+                            </div>
+                        </li>
+                        <li class="list-body">
+                            <div class="row1">
+                                <div class="col1">
+                                    <a href="#home">Link1</a>
+                                    <a href="#about">Link2</a>
+                                    <a href="https://iiita.ac.in">Link3</a>
+                                    <a href="./gallery.html">Link4</a>
+                                </div>
+                                <div class="col1">
+                                    <a href="./btechit.html">Link5</a>
+                                    <a href="./btechece.html">Link6</a>
+                                    <a href="./committee.html">Link7</a>
+                                    <a href="./conference.html">Link8</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <div
+                                style="
+                                    font-weight: 700;
+                                    font-size: 1rem;
+                                    margin-bottom: 0.5rem;
+                                    line-height: 1.2;
+                                "
+                            >
+                                Contact Info
+                            </div>
+                        </li>
+                        <li class="list-body">
+                            <p>
+                                <i
+                                    class="fa-regular fa-user"
+                                    style="margin-right: 10px"
+                                ></i
+                                >Dr. Sonali Agarwal
+                            </p>
+                            <p>
+                                <i
+                                    class="fa-solid fa-mobile-screen"
+                                    style="margin-right: 10px"
+                                ></i>
+                                +91-9415648188
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-map-pin"></i>
+                                Indian Institute of Information Technology
+                                Allahabad Devghat, Jhalwa, Prayagraj-211015, U.
+                                P. INDIA
+                            </p>
+                            <p>
+                                <i
+                                    class="fa-regular fa-envelope"
+                                    style="margin-right: 10px"
+                                ></i>
+                                sonali@iiita.ac.in
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            const register = async (e) => {
+                e.preventDefault();
+                const form = document.querySelector("#register");
+                let data = new FormData(form);
+                const file = document.getElementById("profileImg").files[0];
+                const mail = document.getElementById("username").value;
+                data.set("profileImg", file);
+                console.log(JSON.stringify(Object.fromEntries(data)));
+                console.log(data.get("profileImg"));
+                let res = await fetch(
+                    "https://bda-labs-backend.onrender.com/user/register",
+                    {
+                        body: data,
+                        method: "POST",
+                    }
+                );
+                console.log(res);
+                if (res.status == 200) {
+                    let data = await res.json();
+                    let token = data.data.token;
+                    localStorage.setItem("token", token);
+                    window.location.href = `./home.html?q=${mail}`;
+                } else {
+                    alert("Something went wrong");
+                }
+                return false;
+            };
+
+            document
+                .querySelector("#register")
+                .addEventListener("submit", register);
+        </script>
+    </body>
+</html>

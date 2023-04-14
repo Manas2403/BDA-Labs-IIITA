@@ -30,6 +30,7 @@
             href="https://www.w3schools.com/w3css/4/w3.css"
         />
         <link rel="stylesheet" href="./CSS/style.css" />
+        <link rel="stylesheet" href="./CSS/contact.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
@@ -71,9 +72,7 @@
                     <li><a href="./team.html">Team</a></li>
                     <li class="active"><a href="./contact.html">Contact</a></li>
                     <li>
-                        <a href="https://bda-labs-backend.onrender.com/admin"
-                            >Login</a
-                        >
+                        <a href="./type.html">Login</a>
                     </li>
                 </ul>
             </div>
@@ -281,6 +280,48 @@
                 &nbsp; &nbsp;
             </div> -->
         </main>
+        <div class="contact-section">
+            <div class="content left">
+                <div
+                    style="
+                        color: rgb(1, 41, 112);
+                        font-size: 2rem;
+                        font-weight: bold;
+                    "
+                >
+                    Contact Info
+                </div>
+                <p>Email: sonali@iiita.ac.in</p>
+                <p>Room No. : 5240,CC3</p>
+            </div>
+            <div class="content right">
+                <form action="POST">
+                    <div class="content1">
+                        <div class="left1">
+                            <input type="text" placeholder="Your Name" />
+                            <input
+                                type="text"
+                                placeholder="Your Phone Number"
+                            />
+                        </div>
+                        <div class="right1">
+                            <!-- <input type="text" placeholder="Your Name" /> -->
+                            <input type="text" placeholder="Your Email" />
+                            <input type="text" placeholder="Your Designation" />
+                        </div>
+                    </div>
+                    <div class="content2">
+                        <textarea
+                            name="description"
+                            placeholder="Enter Your Message..."
+                            style="width: 90%"
+                            rows="6"
+                        ></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
         <!-- End #main -->
         <div class="scroll-top">
             <i class="fa fa-angle-up"></i>
