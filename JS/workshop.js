@@ -45,7 +45,7 @@ getWorkshops().then((data) => {
         </div>
         <div class="workshop_img">
             <img
-                src="./PIC/iiita-bg.png"
+                src=${workshop.workshopUrl}
                 alt=""
                 width="400px"
                 height="250px"

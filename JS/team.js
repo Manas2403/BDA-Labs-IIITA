@@ -10,6 +10,7 @@ const mtechContainer = document.getElementById("mtech");
 const dualContainer = document.getElementById("dual");
 const btechContainer = document.getElementById("btech");
 const appendData = (data, container) => {
+    console.log(data);
     container.innerHTML = `
     <div class="type" style="font-weight: bold; color:rgb(1, 41, 112)">
                 ${data[0].position}
@@ -29,7 +30,7 @@ const appendData = (data, container) => {
                     </div>
                     <img
                         class="ContactCard_profileImage__BfUCA"
-                        src="./PIC/sa.jpg"
+                        src=${el.profileUrl}
                     />
                     <div class="ContactCard_cardContent__2ONbn">
                         <b style="margin: 0px; font-size: 1.4rem"
@@ -78,11 +79,12 @@ const appendData = (data, container) => {
 };
 getTeam().then((data) => {
     const team = data.data;
+    console.log(team);
     let faculty = team.filter((el, idx) => {
         return el.position === "Faculty";
     });
     let staff = team.filter((el, idx) => {
-        return el.position === "Staff";
+        return el.position == "Staff";
     });
     let phd = team.filter((el, idx) => {
         return el.position === "Ph.D";
@@ -96,10 +98,10 @@ getTeam().then((data) => {
     let btech = team.filter((el, idx) => {
         return el.position === "B.Tech";
     });
-    faculty && appendData(faculty, facultyContainer);
-    staff && appendData(staff, staffContainer);
-    phd && appendData(phd, phdContainer);
-    mtech && appendData(mtech, mtechContainer);
-    dual && appendData(dual, dualContainer);
-    btech && appendData(btech, btechContainer);
+    faculty.length !== 0 && appendData(faculty, facultyContainer);
+    staff.length !== 0 && appendData(staff, staffContainer);
+    phd.length !== 0 && appendData(phd, phdContainer);
+    mtech.length !== 0 && appendData(mtech, mtechContainer);
+    dual.length !== 0 && appendData(dual, dualContainer);
+    btech.length !== 0 && appendData(btech, btechContainer);
 });
