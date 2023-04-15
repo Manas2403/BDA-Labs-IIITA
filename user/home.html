@@ -52,7 +52,7 @@
             </div>
         </nav>
 
-        <div class="container"></div>
+        <div class="home_container"></div>
         <section class="footer-section" style="padding: 100px 0">
             <div class="footer_container">
                 <div class="pre-footer">
@@ -159,6 +159,127 @@
                 </div>
             </div>
         </section>
+        <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5
+                            class="modal-title"
+                            id="exampleModalLabel"
+                            style="
+                                color: rgb(1, 41, 112);
+                                font-size: 2rem;
+                                font-weight: bold;
+                            "
+                        >
+                            New Publication
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="publication">
+                            <div class="form-group">
+                                <label for="title">
+                                    <input
+                                        type="text"
+                                        name="title"
+                                        id="title"
+                                        required
+                                        placeholder="Enter Title"
+                                        class="form-control"
+                                    />
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="link">
+                                    <input
+                                        type="url"
+                                        name="link"
+                                        id="link"
+                                        required
+                                        placeholder="Enter Link"
+                                        class="form-control"
+                                    />
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">
+                                    <textarea
+                                        name="description"
+                                        id="description"
+                                        cols="40"
+                                        rows="10"
+                                        placeholder="Fill a brief description about publication"
+                                        class="form-control"
+                                    ></textarea>
+                                </label>
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn btn-primary mb-5"
+                                style="background-color: rgb(1, 41, 112)"
+                            >
+                                Add
+                            </button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="./index.js"></script>
+        <script>
+            const addNewPublication = async (e) => {
+                e.preventDefault();
+                const form = document.getElementById("publication");
+                let data = new FormData(form);
+                const urlParams = new URLSearchParams(location.search);
+                const username = urlParams.get("q");
+                console.log(JSON.stringify(Object.fromEntries(data)));
+                let res = await fetch(
+                    "https://bda-labs-backend.onrender.com/user/newpublication/" +
+                        username,
+                    {
+                        method: "POST",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(Object.fromEntries(data)),
+                    }
+                );
+                if (res.status == 200) {
+                    alert("Publication added successfully");
+                } else {
+                    alert("Failed to publish");
+                }
+                return false;
+            };
+            document
+                .querySelector("#publication")
+                .addEventListener("submit", addNewPublication);
+        </script>
     </body>
 </html>

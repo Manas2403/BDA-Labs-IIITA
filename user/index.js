@@ -14,7 +14,7 @@ const getUser = async (req, res) => {
 };
 getUser().then((data) => {
     const user = data.data.user;
-    const container = document.querySelector(".container");
+    const container = document.querySelector(".home_container");
     container.innerHTML = `
     <div
     style="
@@ -49,6 +49,7 @@ getUser().then((data) => {
                 </div>
             </div>
             <div class="research_section">
+            <div style="display:flex;gap:1rem;flex-wrap:wrap">
                 <div
                     style="
                         font-size: 2rem;
@@ -60,7 +61,17 @@ getUser().then((data) => {
                 >
                     Recent Publicatons
                 </div>
-                <div></div>
+                <button style="color:white;background-color:rgb(1,41,112);border-radius:8px;text-align:center;"data-toggle="modal" data-target="#exampleModal">Add</button>
+                </div>
+                <div class=".publications-container">
+                ${user.publications.map((post) => {
+                    return `<div class="post">
+                    <div class="post_title"><i class="fa-solid fa-book" style="color: #ffffff;"></i> ${post.title}</div>
+                    <div class="post_desc">${post.description}</div>
+                    <div class="external_links"><span style="font-weight:bold;color:rgb(1, 41, 112);font-size:1.1rem">Read More</span>:  <a style="text-decoration:none" target="_blank" href=${post.link}><img src="../PIC/arrow.svg" style="width:15px;color:rgb(1,41,112)"/></a></div>
+                </div>`;
+                })}
+                </div>
             </div>
             <div class="research_section">
                 <div
