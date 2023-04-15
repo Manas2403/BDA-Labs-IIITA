@@ -194,7 +194,6 @@
                                     <form
                                         action="forms/contact.php"
                                         method="post"
-                                        role="form"
                                         class="php-email-form"
                                     >
                                         <div class="form-group">
@@ -295,27 +294,53 @@
                 <p>Room No. : 5240,CC3</p>
             </div>
             <div class="content right">
-                <form action="POST">
+                <form
+                    action="https://formsubmit.co/a2a58a770ff156206c87f15aa05b9808"
+                    method="POST"
+                >
                     <div class="content1">
                         <div class="left1">
-                            <input type="text" placeholder="Your Name" />
                             <input
                                 type="text"
+                                placeholder="Your Name"
+                                name="name"
+                                id="name"
+                                required
+                            />
+                            <input
+                                type="number"
+                                name="mobile"
+                                id="mobile"
                                 placeholder="Your Phone Number"
+                                required
                             />
                         </div>
                         <div class="right1">
                             <!-- <input type="text" placeholder="Your Name" /> -->
-                            <input type="text" placeholder="Your Email" />
-                            <input type="text" placeholder="Your Designation" />
+                            <input
+                                type="email"
+                                placeholder="Your Email"
+                                name="mail"
+                                id="mail"
+                                required
+                            />
+                            <input
+                                type="text"
+                                placeholder="Your Designation"
+                                name="designation"
+                                id="designation"
+                                required
+                            />
                         </div>
                     </div>
                     <div class="content2">
                         <textarea
                             name="description"
+                            id="description"
                             placeholder="Enter Your Message..."
                             style="width: 90%"
                             rows="6"
+                            required
                         ></textarea>
                     </div>
                     <button type="submit">Send Message</button>
