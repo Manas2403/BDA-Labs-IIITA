@@ -15,7 +15,6 @@
             href="https://www.w3schools.com/w3css/4/w3.css"
         />
         <link rel="stylesheet" href="./CSS/style.css" />
-        <link rel="stylesheet" href="./CSS/team.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
@@ -24,9 +23,10 @@
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
         />
+        <link rel="stylesheet" href="./CSS/post.css" />
     </head>
 
-    <body onload="plusDivs(-1)">
+    <body>
         <!-- <div id="head_bg">
             <center><h1>Big Data Analytics Lab</h1></center>
             <img
@@ -36,7 +36,10 @@
                 class="iiit_logo"
             />
         </div> -->
-        <nav class="navbar navbar-default">
+        <nav
+            class="navbar navbar-default"
+            style="background: white; margin-bottom: 0"
+        >
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a href="http://iiita.ac.in"
@@ -49,13 +52,16 @@
                 <ul class="nav navbar-nav">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./research.html">Research </a></li>
-                    <li><a href="./publications.html">Publications </a></li>
+                    <li>
+                        <a href="./publications.html">Publications </a>
+                    </li>
                     <li><a href="./workshop.html">Workshops</a></li>
                     <li><a href="./committee.html">Committee</a></li>
                     <li><a href="./teaching.html">Teaching</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-
-                    <li class="active"><a href="./team.html">Team</a></li>
+                    <li class="active">
+                        <a href="./projects.html">Projects</a>
+                    </li>
+                    <li><a href="./team.html">Team</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                     <li>
                         <a href="./type.html">Login</a>
@@ -63,81 +69,18 @@
                 </ul>
             </div>
         </nav>
-        <div
-            class="heading"
-            style="
-                color: rgb(1, 41, 112);
-                font-size: 3rem;
-                text-align: center;
-                font-weight: bold;
-                margin-bottom: 1rem;
-            "
-        >
-            Team
-        </div>
-        <section
-            style="
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 2rem;
-                border-bottom: 1px solid #ccc;
-            "
-        >
-            <div>
-                <a
-                    href="#faculty"
-                    style="color: rgb(1, 41, 112); text-decoration: none"
-                    >Faculty
-                </a>
-            </div>
-            <div>
-                <a
-                    href="#staff"
-                    style="color: rgb(1, 41, 112); text-decoration: none"
-                    >Staff</a
-                >
-            </div>
-            <div>
-                <a
-                    href="#phd"
-                    style="color: rgb(1, 41, 112); text-decoration: none"
-                    >PhD</a
-                >
-            </div>
-            <div>
-                <a
-                    href="#mtech"
-                    style="color: rgb(1, 41, 112); text-decoration: none"
-                    >MTech</a
-                >
-            </div>
-            <div>
-                <a
-                    href="#dual"
-                    style="color: rgb(1, 41, 112); text-decoration: none"
-                    >Dual Degree</a
-                >
-            </div>
-            <div>
-                <a
-                    href="#btech"
-                    style="color: rgb(1, 41, 112); text-decoration: none"
-                    >BTech</a
-                >
+        <section class="page-top">
+            <div class="container">
+                <div class="row">
+                    <div class="heading" style="color: rgb(1, 41, 112)">
+                        Projects
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="faculty_section" id="faculty"></section>
-        <section class="faculty_section" id="staff"></section>
-        <section class="faculty_section" id="phd"></section>
-        <section class="faculty_section" id="mtech"></section>
-        <section class="faculty_section" id="dual"></section>
-        <section class="faculty_section" id="btech"></section>
-        <div class="scroll-top">
-            <i class="fa fa-angle-up"></i>
-        </div>
+        <section>
+            <div class="project-container"></div>
+        </section>
         <section class="footer-section" style="padding: 100px 0">
             <div class="footer_container">
                 <div class="pre-footer">
@@ -275,7 +218,6 @@
                 </div>
             </div>
         </section>
-        <script src="./JS/index.js"></script>
-        <script src="./JS/team.js"></script>
+        <script src="./JS/projects.js"></script>
     </body>
 </html>
