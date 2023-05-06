@@ -1,5 +1,7 @@
 const getTeam = async () => {
-    let res = await fetch("https://bda-labs-backend.onrender.com/team");
+    let res = await fetch(
+        "http://ec2-13-55-130-76.ap-southeast-2.compute.amazonaws.com/team"
+    );
     let data = await res.json();
     return data;
 };

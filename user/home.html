@@ -101,16 +101,16 @@
                         <li class="list-body">
                             <div class="row1">
                                 <div class="col1">
-                                    <a href="#home">Link1</a>
-                                    <a href="#about">Link2</a>
-                                    <a href="https://iiita.ac.in">Link3</a>
-                                    <a href="./gallery.html">Link4</a>
+                                    <a href="index.html">Home</a>
+                                    <a href="research.html">Research</a>
+                                    <a href="publications.html">Publications</a>
+                                    <a href="workshop.html">Workshops</a>
                                 </div>
                                 <div class="col1">
-                                    <a href="./btechit.html">Link5</a>
-                                    <a href="./btechece.html">Link6</a>
-                                    <a href="./committee.html">Link7</a>
-                                    <a href="./conference.html">Link8</a>
+                                    <a href="committee.html">Committee</a>
+                                    <a href="teaching.html">Teaching</a>
+                                    <a href="projects.html">Project</a>
+                                    <a href="contact.html">Contact</a>
                                 </div>
                             </div>
                         </li>
@@ -292,7 +292,7 @@
                 const username = urlParams.get("q");
                 console.log(JSON.stringify(Object.fromEntries(data)));
                 let res = await fetch(
-                    "https://bda-labs-backend.onrender.com/user/newpublication/" +
+                    "http://ec2-13-55-130-76.ap-southeast-2.compute.amazonaws.com/user/newpublication/" +
                         username,
                     {
                         method: "POST",
