@@ -1,7 +1,5 @@
 const getTeam = async () => {
-    let res = await fetch(
-        "http://ec2-13-55-130-76.ap-southeast-2.compute.amazonaws.com/team"
-    );
+    let res = await fetch("https://api.bdalabsiiita.in.net/team");
     let data = await res.json();
     return data;
 };

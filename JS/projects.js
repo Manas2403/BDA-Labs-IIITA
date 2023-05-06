@@ -1,5 +1,5 @@
 const getProjects = async (req, res) => {
-    let data = await fetch("http://ec2-13-55-130-76.ap-southeast-2.compute.amazonaws.com/projects");
+    let data = await fetch("https://api.bdalabsiiita.in.net/projects");
     data = await data.json();
     return data;
 };
@@ -23,8 +23,11 @@ getProjects().then((data) => {
                 ? `<div class="post_desc"><span style="font-weight:bold;color:rgb(1, 41, 112);font-size:1.1rem">Funding Agency</span>: ${post.fundingAgency}</div>`
                 : ""
         }
-        ${post.amount?`<div class="post_desc"><span style="font-weight:bold;color:rgb(1, 41, 112);font-size:1.1rem">Amount</span>: Rs.${   post.amount
-        }</div>`:""}
+        ${
+            post.amount
+                ? `<div class="post_desc"><span style="font-weight:bold;color:rgb(1, 41, 112);font-size:1.1rem">Amount</span>: Rs.${post.amount}</div>`
+                : ""
+        }
     </div>`;
     });
 });

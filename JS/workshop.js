@@ -1,7 +1,5 @@
 const getWorkshops = async () => {
-    let res = await fetch(
-        "http://ec2-13-55-130-76.ap-southeast-2.compute.amazonaws.com/workshops"
-    );
+    let res = await fetch("https://api.bdalabsiiita.in.net/workshops");
     let data = await res.json();
     return data;
 };

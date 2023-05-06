@@ -1,14 +1,11 @@
 const urlParams = new URLSearchParams(location.search);
 const username = urlParams.get("q");
 const getUser = async (req, res) => {
-    let data = await fetch(
-        `http://ec2-13-55-130-76.ap-southeast-2.compute.amazonaws.com/user/${username}`,
-        {
-            headers: {
-                authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-        }
-    );
+    let data = await fetch(`https://api.bdalabsiiita.in.net/user/${username}`, {
+        headers: {
+            authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+    });
     data = await data.json();
     return data;
 };

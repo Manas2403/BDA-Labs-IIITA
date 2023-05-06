@@ -1,6 +1,6 @@
 const getPublications = async (req, res) => {
     let data = await fetch(
-        "http://ec2-13-55-130-76.ap-southeast-2.compute.amazonaws.com/posts/Publications"
+        "https://api.bdalabsiiita.in.net/posts/Publications"
     );
     data = await data.json();
     return data;
