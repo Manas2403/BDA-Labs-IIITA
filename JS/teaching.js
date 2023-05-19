@@ -19,7 +19,7 @@ getCourses().then((data) => {
           <li><b><span style="color:rgb(0,41,112);font-size:1.5rem">Total Students</span></b>: ${
               course.students
           }</li>
-          <h4 style="color:rgb(0,41,112);font-size:1.5rem;font-weight:bold">Publications</h4>
+          <h4 style="color:rgb(0,41,112);font-size:1.5rem;font-weight:bold">Projects</h4>
           ${course.publications.map(
               (pub) =>
                   `<a style="text-decoration:none" href=${pub.link}>${pub.name}</a>`
