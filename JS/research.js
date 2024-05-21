@@ -1,5 +1,5 @@
 const getPublications = async (req, res) => {
-    let data = await fetch("https://api.bdalabsiiita.in.net/posts/Research");
+    let data = await fetch("http://localhost:8080/posts/Research");
     data = await data.json();
     return data;
 };

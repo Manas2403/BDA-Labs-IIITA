@@ -1,5 +1,5 @@
 const getTeam = async () => {
-    let res = await fetch("https://api.bdalabsiiita.in.net/team");
+    let res = await fetch("http://localhost:8080/team");
     let data = await res.json();
     return data;
 };
@@ -30,7 +30,7 @@ const appendData = (data, container) => {
                     </div>
                     <img
                         class="ContactCard_profileImage__BfUCA"
-                        src=${el.profileUrl}
+                        src=${el.profileImgUrl}
                     />
                     <div class="ContactCard_cardContent__2ONbn">
                         <b style="margin: 0px; font-size: 1.4rem"

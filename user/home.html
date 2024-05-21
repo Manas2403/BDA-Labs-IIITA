@@ -292,8 +292,7 @@
                 const username = urlParams.get("q");
                 console.log(JSON.stringify(Object.fromEntries(data)));
                 let res = await fetch(
-                    "https://api.bdalabsiiita.in.net/user/newpublication/" +
-                        username,
+                    "http://localhost:8080/user/newpublication/" + username,
                     {
                         method: "POST",
                         headers: {

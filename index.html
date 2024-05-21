@@ -388,7 +388,7 @@
         <script src="./JS/index.js"></script>
         <script>
             const getNews = async () => {
-                let res = await fetch("https://api.bdalabsiiita.in.net/news");
+                let res = await fetch("http://localhost:8080/news");
                 let data = await res.json();
                 return data;
             };

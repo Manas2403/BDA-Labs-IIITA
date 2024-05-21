@@ -1,7 +1,5 @@
 const getPublications = async (req, res) => {
-    let data = await fetch(
-        "https://api.bdalabsiiita.in.net/posts/Publications"
-    );
+    let data = await fetch("http://localhost:8080/posts/Publications");
     data = await data.json();
     return data;
 };

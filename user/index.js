@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(location.search);
 const username = urlParams.get("q");
 const getUser = async (req, res) => {
-    let data = await fetch(`https://api.bdalabsiiita.in.net/user/${username}`, {
+    let data = await fetch(`http://localhost:8080/user/${username}`, {
         headers: {
             authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -25,7 +25,7 @@ getUser().then((data) => {
     ${user.name}
 </div>
     <div class="about_section">
-                <img src=${data.data.url} alt="Sonali" width="250px" />
+                <img src=${data.data.imageUrl} alt="Sonali" width="250px" />
                 <div style="font-size:1.2rem">
                     ${user.about}
                 </div>

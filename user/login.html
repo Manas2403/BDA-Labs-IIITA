@@ -279,17 +279,14 @@
                 const mail = document.getElementById("username").value;
                 let data = new FormData(form);
                 console.log(JSON.stringify(Object.fromEntries(data)));
-                let res = await fetch(
-                    "https://api.bdalabsiiita.in.net/user/login",
-                    {
-                        method: "POST",
-                        headers: {
-                            Accept: "application/json",
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify(Object.fromEntries(data)),
-                    }
-                );
+                let res = await fetch("http://localhost:8080/user/login", {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(Object.fromEntries(data)),
+                });
                 if (res.status == 200) {
                     let data = await res.json();
                     let token = data.data.token;

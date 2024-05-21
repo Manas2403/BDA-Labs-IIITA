@@ -352,13 +352,10 @@
                 data.set("profileImg", file);
                 console.log(JSON.stringify(Object.fromEntries(data)));
                 console.log(data.get("profileImg"));
-                let res = await fetch(
-                    "https://api.bdalabsiiita.in.net/user/register",
-                    {
-                        body: data,
-                        method: "POST",
-                    }
-                );
+                let res = await fetch("http://localhost:8080/user/register", {
+                    body: data,
+                    method: "POST",
+                });
                 console.log(res);
                 if (res.status == 200) {
                     let data = await res.json();

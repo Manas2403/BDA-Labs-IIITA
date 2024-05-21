@@ -1,5 +1,5 @@
 const getProjects = async (req, res) => {
-    let data = await fetch("https://api.bdalabsiiita.in.net/projects");
+    let data = await fetch("http://localhost:8080/projects");
     data = await data.json();
     return data;
 };

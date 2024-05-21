@@ -1,5 +1,5 @@
 const getWorkshops = async () => {
-    let res = await fetch("https://api.bdalabsiiita.in.net/workshops");
+    let res = await fetch("http://localhost:8080/workshops");
     let data = await res.json();
     return data;
 };
@@ -45,7 +45,7 @@ getWorkshops().then((data) => {
         </div>
         <div class="workshop_img">
             <img
-                src=${workshop.workshopUrl}
+                src=${workshop.workshopImgUrl}
                 alt=""
                 width="400px"
                 height="250px"
